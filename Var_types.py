@@ -5,22 +5,22 @@ class new(object):
     def __init__(self):
         self._protected_var=89
     
-    def display(self):
-        print("the value of protected in main class {}".format(self._protected_var))
-    
 
 class dup(new):
     def __init__(self):
-        
         new.__init__(self)
+        print( "the main protected var ={}".format(self._protected_var))
+        
         self._protected_var=9
+        print("the derived protected var ={}".format(self._protected_var))
 
    
 
 
 
 
-obj2=new()
-obj2.display()
+obj1=new()
+obj2=dup()
+
 
 #private__a
